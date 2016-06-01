@@ -1,0 +1,22 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="AgencyModel" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="Agencies">
+        <Key>
+          <PropertyRef Name="Agency" />
+        </Key>
+        <Property Name="Agency" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        <Property Name="AgencyFullName" Type="Edm.String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        <Property Name="WebsiteURL" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="false" FixedLength="false" />
+        <Property Name="MissionURL" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="false" FixedLength="false" />
+        <Property Name="OrganizationalURL" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="false" FixedLength="false" />
+        <Property Name="KeyPersonnelURL" Type="Edm.String" Nullable="true" MaxLength="100" Unicode="false" FixedLength="false" />
+      </EntityType>
+    </Schema>
+    <Schema Namespace="DolData.Public.API.V1.Models.Agency" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="AgencyEntities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntitySet Name="Agencies" EntityType="AgencyModel.Agencies" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

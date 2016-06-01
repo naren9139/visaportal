@@ -1,0 +1,15 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="DolData.Public.API.V1" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+      <EntityContainer Name="SummerJobsCall" m:IsDefaultEntityContainer="true">
+        <FunctionImport Name="getJobsListing" ReturnType="Edm.String" m:HttpMethod="GET">
+          <Parameter Name="format" Type="Edm.String" Mode="In" />
+          <Parameter Name="query" Type="Edm.String" Mode="In" />
+          <Parameter Name="region" Type="Edm.String" Mode="In" />
+          <Parameter Name="locality" Type="Edm.String" Mode="In" />
+          <Parameter Name="skipCount" Type="Edm.Int32" Mode="In" />
+        </FunctionImport>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
